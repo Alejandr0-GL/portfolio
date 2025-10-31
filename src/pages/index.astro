@@ -1,5 +1,6 @@
 ---
 
+import AboutMe from '../components/AboutMe.astro';
 import Badge from '../components/badge.astro';
 import Education from '../components/Education.astro';
 import Footer from '../components/Footer.astro';
@@ -12,7 +13,7 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Portfolio de Alejandro Guevara">
 	<main>
-		<section class="w-full mx-auto lg:w-[740px] py-30 pb-24">
+		<section class="w-full mx-auto lg:w-[1100PX] py-30 pb-24">
 			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-6">
 				Hola! Soy Alejandro <a href="http://www.linkedin.com/in/alejandroguevara10" class="flex justify-center items-center"><Badge color="blue">Disponible para trabajar</Badge></a>
 			</h1>
@@ -31,12 +32,17 @@ import Layout from '../layouts/Layout.astro';
 			</nav>
 		</section>
 
+		<section class="mx-auto lg:w-[1100px]">
+			<Projects />
+		</section>
+
 		<section class="mx-auto lg:w-[1100px] pb-20">
 			<Education />
 		</section>
 
-		<section class="mx-auto lg:w-[1100px]">
-			<Projects />
+		<section class="mx-auto lg:w-[1100px] pb-20">
+			<AboutMe />
 		</section>
+
 	</main>
 </Layout>
