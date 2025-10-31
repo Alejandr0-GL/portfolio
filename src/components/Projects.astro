@@ -1,0 +1,57 @@
+---
+import ProjectsItem from "./ProjectsItem.astro";
+import ProjectsItems from "./ProjectsItem.astro";
+import Badge from "./badge.astro";
+import CodeIcon from "./icons/CodeIcon.astro";
+import BookIcon from "./icons/bookIcon.astro";
+
+
+interface Project {
+  title: string;
+  date: string;
+  description: string;
+  image?: string;
+  technologies: string[];
+}
+
+const PROJECTS = [
+  {
+    date: 'Enero 2024',
+    title: 'Web Peliculas',
+    description: 'Web de peliculas con TMDB'
+  },
+  {
+    date: 'Septiembre 2025',
+    title: 'Aplicación reloj',
+    description: 'Descripción aplicación de reloj',
+    image: '/src/assets/AppRelojImg.png',
+    technologies: ['React', 'TailwindCSS', 'JavaScript','prueba']
+  }
+];
+const COLORS = ['blue', 'green', 'purple', 'red'];
+---
+
+<div class="flex justify-center items-center gap-x-4 mb-6">
+    <CodeIcon/>
+    <h1 class="text-3xl font-semibold">
+        Proyectos
+    </h1>
+</div>
+
+<div>
+    {
+        PROJECTS.map((item, index) => (
+            <div class="mb-10">
+                <ProjectsItems {...item} >
+
+                    <div>
+                        {item.technologies?.map((tech, i) => (
+                          <Badge color={tech}>{tech}</Badge>
+                        ))}
+                    </div>
+                    
+                </ProjectsItems>
+            </div>
+        ))
+    }
+</div>

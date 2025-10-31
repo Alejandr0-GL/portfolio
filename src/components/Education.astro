@@ -1,0 +1,38 @@
+---
+import EducationItem from "./EducationItem.astro";
+import BookIcon from "./icons/bookIcon.astro";
+
+const EDUCATION = [
+  {
+    date: 'Julio 2025 - Actualidad',
+    title: 'Institución Universitaria Pascual Bravo',
+    description: 'Ingenieria de Software',
+    link: '#',
+  },
+  {
+    date: 'Febrero 2021 - Noviembre 2024',
+    title: 'Instituto Tecnoloico Metropolitano',
+    description: 'Tecnologia en desarrollo de software',
+  },
+  {
+    date: 'Julio 2024 - Noviembre 2024',
+    title: 'Instituto Tecnoloico Metropolitano',
+    description: 'Diplomado en IoT',
+  }
+];
+---
+
+<h2 class="text-3xl mb-6 font-semibold flex justify-center items-center gap-x-4">
+    <BookIcon/>
+    Educación
+</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+    {
+        EDUCATION.map((item, index) => (
+            <div class={`${index === 2 ? "md:col-span-2 md:mx-auto w-[550px]" : ""}`}>
+                <EducationItem {...item} />
+            </div>
+        ))
+    }
+</div>
+

@@ -1,0 +1,20 @@
+---
+interface Props {
+    class?: string;
+    color?: 'blue' | 'green' | 'purple' | 'red' | string;
+}
+
+const { class: customClass = '', color } = Astro.props;
+const colorMap: Record<string, string> = {
+    blue: 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300',
+    green: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300',
+    purple: 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300',
+    red: 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300',
+    prueba: 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300',
+};
+const colorClass = color ? (colorMap[color] ?? String(color)) : '';
+---
+<span 
+    class={`text-xs font-medium px-2.5 py-0.5 rounded-sm me-2 ${colorClass}`}>
+    <slot />
+</span>
