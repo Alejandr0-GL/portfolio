@@ -13,16 +13,16 @@ const { title, date, description, image, technologies} = Astro.props;
 ---
 
 <div class="rounded-xl border border-white/10 p-6 bg-white/5">
-    <header>
+    <header class="mb-4">
         <div class="flex justify-between">
             <h2 class="font-semibold">{title}</h2>
             <time class="text-gray-400/60 text-sm">{date}</time>
         </div>
     </header>
-    <div class="flex justify-center">
+    <div class="flex justify-center w-10/12 mx-auto mb-6">
         <img src={image} alt="">
     </div>
-    <p class="mt-4 mb-2">
+    <p class="mt-4 mb-4 w-11/12 mx-auto">
         {description}
     </p>
     <slot/>

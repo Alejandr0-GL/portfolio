@@ -6,6 +6,7 @@ import Education from '../components/Education.astro';
 import Footer from '../components/Footer.astro';
 import GitHubIcon from '../components/icons/GitHubIcon.astro';
 import LinkedInIcon from '../components/icons/LinkedInIcon.astro';
+import MailIcon from '../components/icons/MailIcon.astro';
 import Projects from '../components/Projects.astro';
 import SocialMedia from '../components/SocialMedia.astro';
 import Layout from '../layouts/Layout.astro';
@@ -29,18 +30,22 @@ import Layout from '../layouts/Layout.astro';
 					<GitHubIcon class="w-6 h-6"/>
 					GitHub
 				</SocialMedia>
+				<SocialMedia href="mailto:alejo.gl031@gmail.com">
+					<MailIcon class="w-6 h-6"/>
+					alejo.gl031@gmail.com
+				</SocialMedia>
 			</nav>
 		</section>
 
-		<section class="mx-auto lg:w-[1100px]">
+		<section class="mx-auto lg:w-[1100px] pb-6" id="projects">
 			<Projects />
 		</section>
 
-		<section class="mx-auto lg:w-[1100px] pb-20">
+		<section class="mx-auto lg:w-[1100px] pb-16" id="education">
 			<Education />
 		</section>
 
-		<section class="mx-auto lg:w-[1100px] pb-20">
+		<section class="mx-auto lg:w-[1100px] pb-16" id="about">
 			<AboutMe />
 		</section>
 
