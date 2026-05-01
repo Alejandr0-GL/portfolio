@@ -10,7 +10,7 @@ const EDUCATION = [
     link: '#',
   },
   {
-    date: 'Febrero 2021 - Noviembre 2024',
+    date: 'Feb. 2021 - Nov. 2024',
     title: 'Instituto Tecnológico Metropolitano',
     description: 'Tecnologia en desarrollo de software',
   },
@@ -26,10 +26,10 @@ const EDUCATION = [
     <BookIcon/>
     Educación
 </h2>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 items-stretch">
     {
         EDUCATION.map((item, index) => (
-      <div class={`${index === 2 ? "md:col-span-2 md:mx-auto w-full max-w-[550px]" : ""}`}>
+        <div class={`${index === 2 ? "md:col-span-2 md:mx-auto w-full md:max-w-[550px] h-full" : "h-full"}`}>
                 <EducationItem {...item} />
             </div>
         ))
