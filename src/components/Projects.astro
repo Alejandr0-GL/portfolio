@@ -54,7 +54,7 @@ const PROJECTS = [
             <div class="mb-10">
                 <ProjectsItems {...item} >
 
-                    <div class="flex flex-wrap gap-2 mt-4 justify-end">
+                    <div class="flex flex-wrap gap-2 mt-4 justify-start sm:justify-end">
                         {item.technologies?.map((tech, i) => (
                           <Badge color={tech}>{tech}</Badge>
                         ))}

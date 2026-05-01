@@ -29,7 +29,7 @@ const EDUCATION = [
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
     {
         EDUCATION.map((item, index) => (
-            <div class={`${index === 2 ? "md:col-span-2 md:mx-auto w-[550px]" : ""}`}>
+      <div class={`${index === 2 ? "md:col-span-2 md:mx-auto w-full max-w-[550px]" : ""}`}>
                 <EducationItem {...item} />
             </div>
         ))
